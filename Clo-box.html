@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        input[name="p"] {
+            display: none;
+        }
+
+        .pic {
+            width: calc(1920px / 3);
+            height: calc(1080px/ 3);
+            display: flex;
+            flex-wrap: nowrap;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+        }
+
+        .pic img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            transition: 1s;
+        }
+
+        .opt {
+            display: flex;
+            position: absolute;
+            bottom: 32%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .opt label {
+            width: 20px;
+            height: 20px;
+            margin: 10px;
+            border: 2px solid #fff;
+            border-radius: 100%;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .opt label:hover {
+            background: #000;
+        }
+
+        @keyframes rol1 {
+            0% {
+                margin-left: 0%;
+            }
+
+            20% {
+                margin-left: -100%;
+            }
+
+            40% {
+                margin-left: -200%;
+            }
+
+            60% {
+                margin-left: -300%;
+            }
+
+            80% {
+                margin-left: -400%;
+            }
+        }
+
+        @keyframes rol2 {
+            0% {
+                margin-left: -100%;
+            }
+
+            20% {
+                margin-left: -200%;
+            }
+
+            40% {
+                margin-left: -300%;
+            }
+
+            60% {
+                margin-left: -400%;
+            }
+
+            80% {
+                margin-left: 0%;
+            }
+        }
+
+        @keyframes rol3 {
+            0% {
+                margin-left: -200%;
+            }
+
+            20% {
+                margin-left: -300%;
+            }
+
+            40% {
+                margin-left: -400%;
+            }
+
+            60% {
+                margin-left: 0%;
+            }
+
+            80% {
+                margin-left: -100%;
+            }
+        }
+
+        @keyframes rol4 {
+            0% {
+                margin-left: -300%;
+            }
+
+            20% {
+                margin-left: -400%;
+            }
+
+            40% {
+                margin-left: 0%;
+            }
+
+            60% {
+                margin-left: -100%;
+            }
+
+            80% {
+                margin-left: -200%;
+            }
+        }
+
+        @keyframes rol5 {
+            0% {
+                margin-left: -400%;
+            }
+
+            20% {
+                margin-left: 0%;
+            }
+
+            40% {
+                margin-left: -100%;
+            }
+
+            60% {
+                margin-left: -200%;
+            }
+
+            80% {
+                margin-left: -300%;
+            }
+        }
+
+        #p1:checked~.pic>:first-child {
+            margin-left: 0%;
+            animation: rol1 20s infinite;
+        }
+
+        #p2:checked~.pic>:first-child {
+            margin-left: -100%;
+            animation: rol2 20s infinite;
+        }
+
+        #p3:checked~.pic>:first-child {
+            margin-left: -200%;
+            animation: rol3 20s infinite;
+        }
+
+        #p4:checked~.pic>:first-child {
+            margin-left: -300%;
+            animation: rol4 20s infinite;
+        }
+
+        #p5:checked~.pic>:first-child {
+            margin-left: -400%;
+            animation: rol5 20s infinite;
+        }
+
+        #p1:active~.pic>:first-child {
+            animation-name: none;
+            margin-left: 0;
+        }
+
+        #p2:active~.pic>:first-child {
+            animation-name: none;
+            margin-left: -100%;
+        }
+
+        #p3:active~.pic>:first-child {
+            animation-name: none;
+            margin-left: -200%;
+        }
+
+        #p4:active~.pic>:first-child {
+            animation-name: none;
+            margin-left: -300%;
+        }
+
+        #p5:active~.pic>:first-child {
+            animation-name: none;
+            margin-left: -400%;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="radio" name="p" id="p1" checked>
+    <input type="radio" name="p" id="p2">
+    <input type="radio" name="p" id="p3">
+    <input type="radio" name="p" id="p4">
+    <input type="radio" name="p" id="p5">
+    <div class="pic">
+        <img src="img/1.png">
+        <img src="img/2.png">
+        <img src="img/3.png">
+        <img src="img/4.png">
+        <img src="img/5.png">
+    </div>
+    <div class="opt">
+        <label for="p1"></label>
+        <label for="p2"></label>
+        <label for="p3"></label>
+        <label for="p4"></label>
+        <label for="p5"></label>
+    </div>
+</body>
+
+</html>

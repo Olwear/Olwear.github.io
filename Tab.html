@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			body {
+				display: flex;
+				justify-content: center;
+			}
+
+			.tab {
+				width: 400px;
+			}
+
+			.catalog {
+				list-style: none;
+				display: flex;
+				justify-content: space-between;
+				margin: 0;
+				padding: 0 5px;
+			}
+
+			li {
+				padding: 5px 40px;
+				background-color: black;
+				border-bottom: 5px solid black;
+				text-align: center;
+				color: white;
+				cursor: pointer;
+				transition: all 0.5s;
+			}
+
+			.container {
+				height: 50px;
+				overflow: hidden;
+				padding: 5px 10px;
+				background-color: rgb(240, 240, 240);
+			}
+
+			.content {
+				padding: 5px;
+				border-top: 2px solid black;
+				line-height: 150%;
+				cursor: pointer;
+				display: none;
+			}
+
+			.content:hover {
+				background-color: black;
+				color: rgb(240, 240, 240);
+			}
+
+			.act {
+				border-bottom: 5px solid black;
+				background-color: rgb(240, 240, 240);
+				color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="tab">
+			<ul class="catalog">
+				<li>通知1</li>
+				<li>通知</li>
+				<li>通知3</li>
+			</ul>
+			<div class="container">
+				<div class="content">内容</div>
+				<div class="content">内容2</div>
+				<div class="content">内容3</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var obtns = document.querySelectorAll(".catalog li");
+			var odivs = document.querySelectorAll(".container div");
+			/* 			obtns[0].addEventListener("click", function() {
+							obtns[0].classList.add('act');
+							odivs[0].style.display = "block";
+							obtns[1].classList.remove('act');
+							odivs[1].style.display = "none";
+							obtns[2].classList.remove('act');
+							odivs[2].style.display = "none";
+						});
+						obtns[1].addEventListener("click", function() {
+							obtns[1].classList.add('act');
+							odivs[1].style.display = "block";
+							obtns[0].classList.remove('act');
+							odivs[0].style.display = "none";
+							obtns[2].classList.remove('act');
+							odivs[2].style.display = "none";
+						});
+						obtns[2].addEventListener("click", function() {
+							obtns[2].classList.add('act');
+							odivs[2].style.display = "block";
+							obtns[0].classList.remove('act');
+							odivs[0].style.display = "none";
+							obtns[1].classList.remove('act');
+							odivs[1].style.display = "none";
+						}); */
+			for (let i = 0; i < obtns.length; i++) {
+				obtns[i].addEventListener("click", function() {
+					for (let j = 0; j < obtns.length; j++) {
+						obtns[j].classList.remove('act');
+						odivs[j].style.display = "none";
+					}
+					obtns[i].classList.add('act');
+					odivs[i].style.display = "block";
+				});
+			}
+		</script>
+	</body>
+</html>

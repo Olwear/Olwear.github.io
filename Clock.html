@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.clock {
+				width: 300px;
+				height: 300px;
+				margin: 0 auto;
+				background-color: aliceblue;
+				border: 2px solid black;
+				border-radius: 100%;
+			}
+
+			.s {
+				width: 2px;
+				height: 150px;
+				float: none;
+				margin: 0% 50%;
+				overflow: hidden;
+				background-color: black;
+				transform-origin: 50% 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="clock">
+			<div class="s">
+			</div>
+		</div>
+		<script type="text/javascript">
+			var c = document.querySelector(clock);
+			var s = document.querySelector(s);
+			setinterval(function dt() {
+				var sec = Date.getSeconds();
+				s.style.transform = "rotate(6*sec)";
+				c.innerHTML=sec;
+			}, 1000);
+		</script>
+	</body>
+</html>
