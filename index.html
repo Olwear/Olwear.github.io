@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home</title>
+    <title>Document</title>
     <link rel="icon" href="img/icon.png" />
     <style type="text/css">
         body {
@@ -56,6 +56,20 @@
 
         .opt label:hover {
             background: #000;
+        }
+
+        @keyframes rol {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
         }
 
         @keyframes rol1 {
@@ -170,31 +184,31 @@
 
         #p1:checked~.pic>:first-child {
             margin-left: 0%;
-            animation: rol1 20s infinite;
+            animation: rol1 cubic-bezier(0, 1, 0, 1) 25s infinite;
         }
 
         #p2:checked~.pic>:first-child {
             margin-left: -100%;
-            animation: rol2 20s infinite;
+            animation: rol2 cubic-bezier(0, 1, 0, 1) 25s infinite;
         }
 
         #p3:checked~.pic>:first-child {
             margin-left: -200%;
-            animation: rol3 20s infinite;
+            animation: rol3 cubic-bezier(0, 1, 0, 1) 25s infinite;
         }
 
         #p4:checked~.pic>:first-child {
             margin-left: -300%;
-            animation: rol4 20s infinite;
+            animation: rol4 cubic-bezier(0, 1, 0, 1) 25s infinite;
         }
 
         #p5:checked~.pic>:first-child {
             margin-left: -400%;
-            animation: rol5 20s infinite;
+            animation: rol5 cubic-bezier(0, 1, 0, 1) 25s infinite;
         }
 
         #p1:active~.pic>:first-child {
-            animation-name: none;
+            animation: none;
             margin-left: 0;
         }
 
