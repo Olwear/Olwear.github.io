@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home</title>
     <link rel="icon" href="img/icon.ico" />
-    <style type="text/css">
+<style type="text/css">
         body {
             margin: 0;
             padding: 0;
@@ -18,35 +18,30 @@
         }
 
         .pic {
-            width: calc(1920px / 3);
-            height: calc(1080px/ 3);
+            width: 80%;
             display: flex;
-            flex-wrap: nowrap;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            margin: 0 auto;
             overflow: hidden;
         }
 
         .pic img {
             width: 100%;
             height: 100%;
-            display: block;
             transition: 1s;
         }
 
         .opt {
+            width: fit-content;
             display: flex;
-            position: absolute;
-            bottom: 32%;
-            left: 50%;
-            transform: translateX(-50%);
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            transform: translateY(-60px)
         }
 
         .opt label {
-            width: 20px;
-            height: 20px;
+            width: 12px;
+            height: 12px;
             margin: 10px;
             border: 2px solid #fff;
             border-radius: 100%;
@@ -58,133 +53,119 @@
             background: #000;
         }
 
-        @keyframes rol {
-            0% {
-                opacity: 1;
-            }
-
-            50% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
         @keyframes rol1 {
-            0% {
+            10% {
                 margin-left: 0%;
             }
 
-            20% {
+            30% {
                 margin-left: -100%;
             }
 
-            40% {
+            50% {
                 margin-left: -200%;
             }
 
-            60% {
+            70% {
                 margin-left: -300%;
             }
 
-            80% {
+            90% {
                 margin-left: -400%;
             }
         }
 
         @keyframes rol2 {
-            0% {
+            10% {
                 margin-left: -100%;
             }
 
-            20% {
+            30% {
                 margin-left: -200%;
             }
 
-            40% {
+            50% {
                 margin-left: -300%;
             }
 
-            60% {
+            70% {
                 margin-left: -400%;
             }
 
-            80% {
+            90% {
                 margin-left: 0%;
             }
         }
 
         @keyframes rol3 {
-            0% {
+            10% {
                 margin-left: -200%;
             }
 
-            20% {
+            30% {
                 margin-left: -300%;
             }
 
-            40% {
+            50% {
                 margin-left: -400%;
             }
 
-            60% {
+            70% {
                 margin-left: 0%;
             }
 
-            80% {
+            90% {
                 margin-left: -100%;
             }
         }
 
         @keyframes rol4 {
-            0% {
+            10% {
                 margin-left: -300%;
             }
 
-            20% {
+            30% {
                 margin-left: -400%;
             }
 
-            40% {
+            50% {
                 margin-left: 0%;
             }
 
-            60% {
+            70% {
                 margin-left: -100%;
             }
 
-            80% {
+            90% {
                 margin-left: -200%;
             }
         }
 
         @keyframes rol5 {
-            0% {
+            10% {
                 margin-left: -400%;
             }
 
-            20% {
+            30% {
                 margin-left: 0%;
             }
 
-            40% {
+            50% {
                 margin-left: -100%;
             }
 
-            60% {
+            70% {
                 margin-left: -200%;
             }
 
-            80% {
+            90% {
                 margin-left: -300%;
             }
         }
 
         #p1:checked~.pic>:first-child {
             margin-left: 0%;
-            animation: rol1 cubic-bezier(0, 1, 0, 1) 25s infinite;
+            animation: rol1 cubic-bezier(0,1,0,1) 25s infinite;
         }
 
         #p2:checked~.pic>:first-child {
