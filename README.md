@@ -1,6 +1,6 @@
 # Olwear.github.io
 ivory tower
-****
+* * *
 ## 原神零氪党的自我修养1.0 by 等风i
 ### 欢迎订阅我的虎牙直播间：[狂鸟丶等风](https://www.huya.com/orlove)
 [提瓦特大地图](https://bbs.mihoyo.com/ys/obc/content/1060/detail?bbs_presentation_style=no_header) **找神瞳、宝箱等之用**
@@ -31,7 +31,7 @@ ivory tower
 
 	> **活动**
 	米游社、微博超话签到
-****
+***
 ### 切记这只是零氪新手的攻略
 * ### **1 -- 20**
 	* 主线支线任务
