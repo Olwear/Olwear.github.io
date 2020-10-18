@@ -1,7 +1,7 @@
 # Olwear.github.io
 ivory tower
 ***
-### 原神零氪党的自我修养1.0 BY 等风i
+### 原神零氪党的自我修养1.0 by等风i
 #### 欢迎订阅我的虎牙直播间：[狂鸟丶等风](https://www.huya.com/orlove)
 * ### 上路先引：
 	> **祈愿**
