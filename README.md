@@ -6,7 +6,7 @@ ivory tower
 ## 原神零氪党的自我修养1.0 by [等风i](https://bbs.mihoyo.com/ys/accountCenter/postList?id=185349014)
 ### 欢迎订阅我的虎牙直播间 [狂鸟丶等风](https://www.huya.com/orlove)
 [提瓦特大地图](https://bbs.mihoyo.com/ys/obc/content/1060/detail?bbs_presentation_style=no_header) **找神瞳、宝箱等之用**  
-[丨迪大爷丨](https://bbs.mihoyo.com/ys/accountCenter/postList?id=162661361 "丨迪大爷丨") **某宝箱攻略收集大佬**
+[丨迪大爷丨](https://bbs.mihoyo.com/ys/accountCenter/postList?id=162661361 "丨迪大爷丨") **某宝箱攻略大佬**
 * ### 上路先引
 	> **祈愿**
 	> 新手务必抽满新手池，然后死磕UP池就完事了。不要花原石和星辉在常驻池，星尘兑换和活动奖励可以丢常驻池。
