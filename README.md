@@ -3,7 +3,7 @@ ivory tower
 
 ***
 
-## 原神零氪党的自我修养1.0 by [等风i](https://bbs.mihoyo.com/ys/accountCenter/postList?id=185349014)
+## 原神零氪党的自我修养 by [等风i](https://bbs.mihoyo.com/ys/accountCenter/postList?id=185349014)
 ### 欢迎订阅我的虎牙直播间 [狂鸟丶等风](https://www.huya.com/orlove)
 [提瓦特大地图](https://bbs.mihoyo.com/ys/obc/content/1060/detail?bbs_presentation_style=no_header) **找神瞳、宝箱等之用**  
 [丨迪大爷丨](https://bbs.mihoyo.com/ys/accountCenter/postList?id=162661361 "丨迪大爷丨") **某宝箱攻略大佬**
@@ -15,7 +15,7 @@ ivory tower
 	组一个主c和3个工具人的阵容,主升c就可以,工具人提升量力而行。
 
 	> **体力**
-	多刷藏金之花。每周的龙狼（**风魔龙、北风之狼**）用来积攒纪行经验,卡周末最高等级刷。
+	多刷藏金之花。每周的龙狼（**风魔龙、北风之狼**）用来积攒纪行经验，卡周最高等级去。
 
 	> **每日委托**
 	务必要当作日常去完成，后期冒险阅历获取的唯二途径之一，任何时候都不可以忽视。
@@ -70,11 +70,9 @@ ivory tower
 * ### 一些让你更快的小tips
 	* 适当使用料理提升实力，快速结束战斗、超车赶路
 		> 贪吃的时候不要忘了收集和购买食材
-		> >关于商人的坐标，可以自行搜索
 
 	* 尽量用元素战技赶路，甚至在找神瞳、宝箱上帮大忙
 		> 这就是为什么刻晴频频摔死的原因了吧
-
 
 #### **对于我这种又菜又爱玩的相当友好，毕竟零氪**
 
