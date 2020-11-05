@@ -1,4 +1,4 @@
-# 原神零氪党的自我修养 by [等风i](https://bbs.mihoyo.com/ys/accountCenter/postList?id=185349014)
+# 原神养成 by [等风i](https://bbs.mihoyo.com/ys/accountCenter/postList?id=185349014)
 ### 欢迎订阅我的虎牙直播间 [狂鸟丶等风](https://www.huya.com/orlove)
 [提瓦特大地图](https://bbs.mihoyo.com/ys/obc/content/1060/detail?bbs_presentation_style=no_header) **找神瞳、宝箱等之用**
 
@@ -186,7 +186,7 @@
 |||| 防御力% | 生命值% |
 ||||| 防御力% |
 
-#### 无副属性
+#### 无下副属性
 
 **~~元素伤害加成% 物理伤害加成% 治疗加成%~~**
 
