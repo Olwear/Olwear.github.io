@@ -192,15 +192,6 @@
 
 **~~元素伤害加成% 物理伤害加成% 治疗加成%~~**
 
-st=>start: Start
-e=>end
-op=>operation: My Operation
-cond=>condition: Yes or No?
-
-st->op->cond
-cond(yes)->e
-cond(no)->op
-
 ***
 
 ### <center>持续更新中</center>
