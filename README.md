@@ -1,4 +1,4 @@
-# 原神的养成 by [等风i](https://bbs.mihoyo.com/ys/accountCenter/postList?id=185349014)
+# 原神的养成 By [等风i](https://bbs.mihoyo.com/ys/accountCenter/postList?id=185349014)
 ### 欢迎订阅我的虎牙直播间 [狂鸟丶等风](https://www.huya.com/orlove)
 [提瓦特大地图](https://bbs.mihoyo.com/ys/obc/content/1060/detail?bbs_presentation_style=no_header) **找神瞳、宝箱等之用**
 
@@ -8,7 +8,7 @@
 
 	> **祈愿**
 
-	> 新手务必抽满新手池，然后死磕UP池就完事了。新手不要花原石和星辉在常驻池，星尘兑换和活动奖励可以丢常驻池。抽UP池要判断是否自己需要，否则影响体验
+	> 新手务必抽满新手池，然后死磕UP池就完事了。新手不要花原石和星辉在常驻池，星尘兑换和活动奖励可以丢常驻池。抽UP池要考虑需求，否则影响体验
 
 	> **队伍配置**
 
