@@ -1,6 +1,6 @@
 # 原神的养成 By [等风i](https://bbs.mihoyo.com/ys/accountCenter/postList?id=185349014)
 ### 欢迎订阅我的虎牙直播间 [狂鸟丶等风](https://www.huya.com/orlove)
-[提瓦特大地图](https://webstatic.mihoyo.com/app/ys-map-cn/index.html?bbs_presentation_style=no_header&ts=1606133548270#/map/2?shown_types=) **找神瞳、宝箱等之用**
+[提瓦特大地图](https://bbs.mihoyo.com/ys/obc/content/1060/detail?bbs_presentation_style=no_header) **找神瞳、宝箱等之用**
 
 ***
 
@@ -12,7 +12,7 @@
 
 	* **队伍配置**
 
-	    > 组一个主c和3个工具人的阵容，主升c就可以，工具人提升量力而行（**40足矣，送的够用，苟就完事**）
+	    > 1个主C和3个工具人的阵容，主升C就可以，工具人培养量力而行（**40足矣，送的够用，苟就完事**）
 
 	* **体力**
 
@@ -30,7 +30,7 @@
 
 	* **角色突破、天赋升级**
 
-        > 针对性地刷主c材料，下非周末的轮替本
+        > 针对性地刷主C材料，下非周末的轮替本
 
 	* **武器突破**
 
@@ -185,7 +185,7 @@
 
 ***
 
-* ### 祈愿玄学
+* ### 抽卡玄学
 
     * 积累原石
 
@@ -198,7 +198,6 @@
     * 单个BOSS的各材料至少有一个
     
     * 单个BOSS的各材料至少两种没有
-
 ***
 
 * ### 须臾的雪探
