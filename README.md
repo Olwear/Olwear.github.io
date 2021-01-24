@@ -217,9 +217,15 @@
 
 * ### 矿点分享
 
-![矿点](https://github.com/Olwear/Olwear.github.io/blob/master/mine1.png)
 ![矿点](../mine1.png)
-![矿点](/mine1.png)
+
+***
+
+![矿点](../mine2.png)
+
+***
+
+![矿点](../mine3.png)
 
 ***
 
