@@ -215,6 +215,14 @@
 
 ***
 
+* ### 矿点分享
+
+![矿点](https://github.com/Olwear/Olwear.github.io/blob/master/mine1.png)
+![矿点](../mine1.png)
+![矿点](/mine1.png)
+
+***
+
 * ### 元素精通大师 —— 砂糖 
 
     * **过气的砂糖不要扔，裹上鸡蛋液，粘上面包糠，炸至金黄，隔壁小孩都馋哭惹**
