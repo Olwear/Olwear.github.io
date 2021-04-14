@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+        }
+        
+        .ibox {
+            width: 320px;
+            border: 2px solid #eee;
+        }
+        
+        .ibox .iwrap .iline {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid #eee;
+        }
+        
+        .ibox .iwrap input[type="text"] {
+            width: 150px;
+            font-size: 28px;
+            border: 0;
+            outline: none;
+        }
+        
+        .injury {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: 10px auto;
+            color: #fff;
+            background: #000;
+            border-radius: 100%;
+            opacity: .8;
+            cursor: pointer;
+        }
+        
+        .injury p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<div class="main">
+    <div class="ibox">
+        <div class="iwrap">
+            <div>
+                <div class="iline">伤害倍率<input type="text" id="r" onchange="gd(this)" autocomplete="off"></div>
+            </div>
+            <div>
+                <div class="iline">攻击力<input type="text" id="a" onchange="gd(this)" autocomplete="off"></div>
+            </div>
+            <div>
+                <div class="iline">暴击伤害<input type="text" id="ca" onchange="gd(this)" autocomplete="off"></div>
+            </div>
+            <div>
+                <div class="iline">伤害加成<input type="text" id="ia" onchange="gd(this)" autocomplete="off"></div>
+            </div>
+            <div class="iline">
+                <input type="radio" name="er" value="0" onchange="ger(this)" checked="checked">无</input>
+                <input type="radio" name="er" value="0.5" onchange="ger(this)">1.5倍增幅</input>
+                <input type="radio" name="er" value="1" onchange="ger(this)">2倍增幅</input>
+            </div>
+            <div>
+                <div class="iline">元素精通加成<input type="text" id="ema" onchange="gd(this)" autocomplete="off"></div>
+            </div>
+            <div>
+                <div class="iline">怪物抗性<input type="text" id="mr" onchange="gd(this)" autocomplete="off"></div>
+            </div>
+            <div>
+                <div class="iline">角色等级<input type="text" id="clv" onchange="gd(this)" autocomplete="off"></div>
+            </div>
+            <div>
+                <div class="iline">怪物等级<input type="text" id="mlv" onchange="gd(this)" autocomplete="off"></div>
+            </div>
+        </div>
+        <div class="injury"></div>
+    </div>
+</div>
+
+<body>
+    <script type="text/javascript">
+        var dic = {};
+        (function() {
+            dic["r"] = 0; //技能倍率
+            dic["a"] = 0; //攻击力
+            dic["ca"] = 0; //暴击伤害
+            dic["ia"] = 0; //伤害加成
+            dic["er"] = 0; //元素反应
+            dic["ema"] = 0; //元素精通加成
+            dic["mr"] = 0; //怪物抗性
+            dic["clv"] = 0; //角色等级
+            dic["mlv"] = 0; //怪物等级
+            for (var i in dic) {
+                var x = document.getElementById(i);
+                if (x) {
+                    dic[i] = parseInt(x.value, 10);
+                }
+
+            }
+            ci();
+        })();
+
+        function gd(x) {
+            if (/^[0-9]{0,5}$/.test(x.value)) {
+                dic[x.id] = parseInt(x.value, 10);
+                ci();
+            } else {
+                dic[x.id] = 0;
+                x.value = "";
+            }
+        }
+
+        function ger(x) {
+            dic["er"] = parseFloat(x.value, 10);
+            ci();
+        }
+
+        function ci() {
+            var injury = dic["r"] / 100 * dic["a"] * (1 + dic["ia"] / 100) * (1 - dic["mr"] / 100) * ((100 + dic["clv"]) / (200 + dic["clv"] + dic["mlv"])); //一般伤害
+            //技能倍率 * 攻击力 * 伤害加成 * (1 - 怪物抗性) * ((100 + 角色等级) / (200 + 角色等级 + 怪物等级))
+            injury = dic["ca"] ? injury * (1 + dic["ca"] / 100) : injury; //暴击
+            injury = dic["er"] ? injury * ((1 + dic["er"]) + (1 + dic["ema"] / 100)) : injury; //元素反应
+            injury = ~~injury; //最终伤害
+            document.querySelector(".injury").innerHTML = "<p>" + injury + "</p>";
+        }
+    </script>
+</body>
+
+</html>
