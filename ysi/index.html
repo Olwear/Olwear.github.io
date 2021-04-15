@@ -128,6 +128,7 @@
         }
 
         function ger(x) {
+            console.log(this.type)
             dic["er"] = parseFloat(x.value, 10);
             ci();
         }
@@ -138,7 +139,8 @@
             injury = dic["ca"] ? injury * (1 + dic["ca"] / 100) : injury; //暴击
             injury = dic["er"] ? injury * ((1 + dic["er"]) + (1 + dic["ema"] / 100)) : injury; //元素反应
             injury = ~~injury; //最终伤害
-            document.querySelector(".injury").innerHTML = "<p>" + injury + "</p>";
+            var o = document.querySelector(".injury");
+            o.innerHTML = injury > 0 ? "<p>" + injury + "</p>" : "";
         }
     </script>
 </body>
