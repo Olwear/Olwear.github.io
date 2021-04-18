@@ -13,6 +13,14 @@
             box-sizing: border-box;
         }
         
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f0f0f0;
+        }
+        
         .main {
             display: flex;
             justify-content: center;
@@ -20,7 +28,7 @@
         
         .ibox {
             width: 320px;
-            border: 2px solid #eee;
+            border: 2px solid #000;
         }
         
         .ibox .iwrap .iline {
@@ -29,12 +37,13 @@
             align-items: center;
             margin: 8px;
             padding: 8px;
-            border: 2px solid #eee;
+            border: 2px solid #000;
         }
         
         .ibox .iwrap input[type="text"] {
             width: 160px;
             font-size: 28px;
+            background: transparent;
             border: 0;
             outline: none;
         }
@@ -59,41 +68,39 @@
         }
     </style>
 </head>
-<div class="main">
-    <div class="ibox">
-        <div class="iwrap">
-            <div>
-                <div class="iline">伤害倍率<input type="text" id="r" onchange="gd(this)" autocomplete="off"></div>
-            </div>
-            <div>
-                <div class="iline">攻击力<input type="text" id="a" onchange="gd(this)" autocomplete="off"></div>
-            </div>
-            <div>
-                <div class="iline">暴击伤害<input type="text" id="ca" onchange="gd(this)" autocomplete="off"></div>
-            </div>
-            <div>
-                <div class="iline">伤害加成<input type="text" id="ia" onchange="gd(this)" autocomplete="off"></div>
-            </div>
-            <div class="iline">
-                <input type="radio" name="er" value="0" onchange="ger(this)" checked="checked">无</input>
-                <input type="radio" name="er" value="0.5" onchange="ger(this)">1.5倍增幅</input>
-                <input type="radio" name="er" value="1" onchange="ger(this)">2倍增幅</input>
-            </div>
-            <div>
-                <div class="iline">元素精通加成<input type="text" id="ema" onchange="gd(this)" autocomplete="off"></div>
-            </div>
-            <div>
-                <div class="iline">怪物抗性<input type="text" id="mr" onchange="gd(this)" autocomplete="off"></div>
-            </div>
-            <div>
-                <div class="iline">角色等级<input type="text" id="clv" onchange="gd(this)" autocomplete="off"></div>
-            </div>
-            <div>
-                <div class="iline">怪物等级<input type="text" id="mlv" onchange="gd(this)" autocomplete="off"></div>
-            </div>
+<div class="ibox">
+    <div class="iwrap">
+        <div>
+            <div class="iline">伤害倍率<input type="text" id="r" onchange="gd(this)" autocomplete="off"></div>
         </div>
-        <div class="injury"></div>
+        <div>
+            <div class="iline">攻击力<input type="text" id="a" onchange="gd(this)" autocomplete="off"></div>
+        </div>
+        <div>
+            <div class="iline">暴击伤害<input type="text" id="ca" onchange="gd(this)" autocomplete="off"></div>
+        </div>
+        <div>
+            <div class="iline">伤害加成<input type="text" id="ia" onchange="gd(this)" autocomplete="off"></div>
+        </div>
+        <div class="iline">
+            <input type="radio" name="er" value="0" onchange="ger(this)" checked="checked">无</input>
+            <input type="radio" name="er" value="0.5" onchange="ger(this)">1.5倍增幅</input>
+            <input type="radio" name="er" value="1" onchange="ger(this)">2倍增幅</input>
+        </div>
+        <div>
+            <div class="iline">元素精通加成<input type="text" id="ema" onchange="gd(this)" autocomplete="off"></div>
+        </div>
+        <div>
+            <div class="iline">怪物抗性<input type="text" id="mr" onchange="gd(this)" autocomplete="off"></div>
+        </div>
+        <div>
+            <div class="iline">角色等级<input type="text" id="clv" onchange="gd(this)" autocomplete="off"></div>
+        </div>
+        <div>
+            <div class="iline">怪物等级<input type="text" id="mlv" onchange="gd(this)" autocomplete="off"></div>
+        </div>
     </div>
+    <div class="injury"></div>
 </div>
 
 <body>
