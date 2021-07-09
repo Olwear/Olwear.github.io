@@ -12,7 +12,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             display: flex;
             justify-content: center;
@@ -20,17 +20,17 @@
             min-height: 100vh;
             background: #f0f0f0;
         }
-        
+
         .main {
             display: flex;
             justify-content: center;
         }
-        
+
         .ibox {
             width: 320px;
             border: 2px solid #000;
         }
-        
+
         .ibox .iwrap .iline {
             display: flex;
             justify-content: space-between;
@@ -39,7 +39,7 @@
             padding: 8px;
             border: 2px solid #000;
         }
-        
+
         .ibox .iwrap input[type="text"] {
             width: 160px;
             font-size: 28px;
@@ -47,7 +47,7 @@
             border: 0;
             outline: none;
         }
-        
+
         .injury {
             position: relative;
             width: 100px;
@@ -59,7 +59,7 @@
             opacity: .8;
             cursor: pointer;
         }
-        
+
         .injury p {
             position: absolute;
             top: 50%;
@@ -71,33 +71,34 @@
 <div class="ibox">
     <div class="iwrap">
         <div>
-            <div class="iline">伤害倍率<input type="text" id="r" autocomplete="off"></div>
+            <div class="iline"><span>伤害倍率</span><input type="text" id="r"></div>
         </div>
         <div>
-            <div class="iline">攻击力<input type="text" id="a" autocomplete="off"></div>
+            <div class="iline"><span>攻击力</span><input type="text" id="a"></div>
         </div>
         <div>
-            <div class="iline">暴击伤害<input type="text" id="ca" autocomplete="off"></div>
+            <div class="iline"><span>暴击伤害</span><input type="text" id="ca"></div>
         </div>
         <div>
-            <div class="iline">伤害加成<input type="text" id="ia" autocomplete="off"></div>
+            <div class="iline"><span>伤害加成</span><input type="text" id="ia"></div>
         </div>
         <div class="iline">
-            <input type="radio" name="er" id="er" value="0" checked>无</input>
-            <input type="radio" name="er" id="er" value="0.5">1.5倍增幅</input>
-            <input type="radio" name="er" id="er" value="1">2倍增幅</input>
+            <input type="radio" name="er" id="er" value="0" checked><span>无</span>
+            <input type="radio" name="er" id="er" value="0.5"><span>1.5倍增幅</span>
+            <input type="radio" name="er" id="er" value="1"><span>2倍增幅</span>
+            <input type="radio" name="er" id="scd" value="1"><span>超导</span>
         </div>
         <div>
-            <div class="iline">元素精通加成<input type="text" id="ema" autocomplete="off"></div>
+            <div class="iline"><span>元素精通加成</span><input type="text" id="ema"></div>
         </div>
         <div>
-            <div class="iline">怪物抗性<input type="text" id="mr" autocomplete="off"></div>
+            <div class="iline"><span>怪物抗性</span><input type="text" id="mr"></div>
         </div>
         <div>
-            <div class="iline">角色等级<input type="text" id="clv" autocomplete="off"></div>
+            <div class="iline"><span>角色等级</span><input type="text" id="clv"></div>
         </div>
         <div>
-            <div class="iline">怪物等级<input type="text" id="mlv" autocomplete="off"></div>
+            <div class="iline"><span>怪物等级</span><input type="text" id="mlv"></div>
         </div>
     </div>
     <div class="injury"></div>
@@ -105,20 +106,20 @@
 
 <body>
     <script type="text/javascript">
-        (function() {
+        (function () {
             var dic = {};
-            dic["r"] = 0; //技能倍率
-            dic["a"] = 0; //攻击力
-            dic["ca"] = 0; //暴击伤害
-            dic["ia"] = 0; //伤害加成
-            dic["er"] = 0; //元素反应
-            dic["ema"] = 0; //元素精通加成
-            dic["mr"] = 0; //怪物抗性
-            dic["clv"] = 0; //角色等级
-            dic["mlv"] = 0; //怪物等级
+            dic["r"] = 0; // 技能倍率
+            dic["a"] = 0; // 攻击力
+            dic["ca"] = 0; // 暴击伤害
+            dic["ia"] = 0; // 伤害加成
+            dic["er"] = 0; // 元素反应
+            dic["ema"] = 0; // 元素精通加成
+            dic["mr"] = 0; // 怪物抗性
+            dic["clv"] = 0; // 角色等级
+            dic["mlv"] = 0; // 怪物等级
             var x = document.querySelectorAll(".iline input");
             for (var i in x) {
-                x[i].oninput = function(e) {
+                x[i].oninput = function (e) {
                     e = e.target;
                     if (/^[0-9]{0,5}$/.test(e.value) || e.id == "er") {
                         dic[e.id] = parseFloat(e.value, 10);
@@ -131,11 +132,12 @@
             }
 
             function ci() {
-                var injury = dic["r"] / 100 * dic["a"] * (1 + dic["ia"] / 100) * (1 - dic["mr"] / 100) * ((100 + dic["clv"]) / (200 + dic["clv"] + dic["mlv"])); //一般伤害
-                //技能倍率 * 攻击力 * 伤害加成 * (1 - 怪物抗性) * ((100 + 角色等级) / (200 + 角色等级 + 怪物等级))
+                var injury = dic["r"] / 100 * dic["a"] * (1 + dic["ia"] / 100) * (1 - dic["mr"] / 100) * ((100 +
+                    dic["clv"]) / (200 + dic["clv"] + dic["mlv"])); // 一般伤害
+                // 技能倍率 * 攻击力 * 伤害加成 * (1 - 怪物抗性) * ((100 + 角色等级) / (200 + 角色等级 + 怪物等级))
                 injury = dic["ca"] ? injury * (1 + dic["ca"] / 100) : injury; //暴击
-                injury = dic["er"] ? injury * ((1 + dic["er"]) + (1 + dic["ema"] / 100)) : injury; //元素反应
-                injury = ~~injury; //最终伤害
+                injury = dic["er"] ? injury * ((1 + dic["er"]) + (1 + dic["ema"] / 100)) : injury; // 元素反应
+                injury = ~~injury; // 最终伤害
                 var o = document.querySelector(".injury");
                 o.innerHTML = injury > 0 ? "<p>" + injury + "</p>" : "";
             }
