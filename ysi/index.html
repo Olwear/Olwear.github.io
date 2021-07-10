@@ -71,13 +71,13 @@
 <div class="ibox">
     <div class="iwrap">
         <div>
-            <div class="iline"><span>伤害倍率</span><input type="text" id="r"></div>
+            <div class="iline"><span>伤害倍率</span><input type="text" id="sd"></div>
         </div>
         <div>
             <div class="iline"><span>攻击力</span><input type="text" id="a"></div>
         </div>
         <div>
-            <div class="iline"><span>暴击伤害</span><input type="text" id="ca"></div>
+            <div class="iline"><span>暴击伤害</span><input type="text" id="cd"></div>
         </div>
         <div>
             <div class="iline"><span>伤害加成</span><input type="text" id="ia"></div>
@@ -108,39 +108,61 @@
     <script type="text/javascript">
         (function () {
             var dic = {};
-            dic["r"] = 0; // 技能倍率
-            dic["a"] = 0; // 攻击力
-            dic["ca"] = 0; // 暴击伤害
-            dic["ia"] = 0; // 伤害加成
+            dic["sd"] = 100; // 技能倍率
+            dic["a"] = 2000; // 攻击力
+            dic["cd"] = 200; // 暴击伤害
+            dic["ia"] = 100; // 伤害加成
             dic["er"] = 0; // 元素反应
             dic["ema"] = 0; // 元素精通加成
+            dic["scd"] = 0; // 超导
             dic["mr"] = 0; // 怪物抗性
             dic["clv"] = 0; // 角色等级
             dic["mlv"] = 0; // 怪物等级
             var x = document.querySelectorAll(".iline input");
             for (var i in x) {
+                x[i].value = x[i].type === "text" ? dic[x[i].id] || null : x[i].value;
                 x[i].oninput = function (e) {
                     e = e.target;
-                    if (/^[0-9]{0,5}$/.test(e.value) || e.id == "er") {
+                    if (/^\d+\.?\d*$/.test(e.value)) {
                         dic[e.id] = parseFloat(e.value, 10);
-                        ci();
                     } else {
                         dic[e.id] = 0;
-                        e.value = "";
+                        e.value = null;
                     }
+                    ci();
                 };
             }
 
             function ci() {
-                var injury = dic["r"] / 100 * dic["a"] * (1 + dic["ia"] / 100) * (1 - dic["mr"] / 100) * ((100 +
-                    dic["clv"]) / (200 + dic["clv"] + dic["mlv"])); // 一般伤害
-                // 技能倍率 * 攻击力 * 伤害加成 * (1 - 怪物抗性) * ((100 + 角色等级) / (200 + 角色等级 + 怪物等级))
-                injury = dic["ca"] ? injury * (1 + dic["ca"] / 100) : injury; //暴击
-                injury = dic["er"] ? injury * ((1 + dic["er"]) + (1 + dic["ema"] / 100)) : injury; // 元素反应
+                var sd = dic["sd"],
+                    a = dic["a"],
+                    cd = dic["cd"],
+                    ia = dic["ia"],
+                    er = dic["er"],
+                    ema = dic["ema"],
+                    scd = dic["scd"],
+                    mr = dic["mr"],
+                    clv = dic["clv"],
+                    mlv = dic["mlv"],
+                    injuey;
+                if (scd) {
+                    er = 0;
+                    if (mr >= 40) {
+                        mr -= 40;
+                    } else {
+                        ia += (40 - mr) / 2;
+                        mr = 0;
+                    }
+                }
+                injury = sd / 100 * a * (1 + ia / 100) * (1 - mr / 100) * ((100 +
+                    clv) / (200 + clv + mlv)); // 一般伤害
+                // 技能倍率 * 攻击力 * (1 + 伤害加成) * (1 - 怪物抗性) * ((100 + 角色等级) / (200 + 角色等级 + 怪物等级))
+                injury = cd ? injury * (1 + cd / 100) : injury; //暴击
+                injury = er ? injury * (1 + er + ema / 100) : injury; // 元素反应
                 injury = ~~injury; // 最终伤害
-                var o = document.querySelector(".injury");
-                o.innerHTML = injury > 0 ? "<p>" + injury + "</p>" : "";
+                document.querySelector(".injury").innerHTML = injury > 0 ? "<p>" + injury + "</p>" : "";;
             }
+            ci();
         })();
     </script>
 </body>
