@@ -1,6 +1,7 @@
 # 原神的养成 By [等风i](https://bbs.mihoyo.com/ys/accountCenter/postList?id=185349014)
 ### 欢迎订阅我的虎牙直播间 [狂鸟丶等风](https://www.huya.com/orlove)
 [提瓦特大地图](https://bbs.mihoyo.com/ys/obc/content/1060/detail?bbs_presentation_style=no_header) **找神瞳、宝箱等之用**
+[伤害计算器](https://olwear.github.io/ysi) **简易计算伤害**
 
 ***
 
@@ -264,6 +265,7 @@
     * **输出手法**
 
         * 班尼特EQ，香菱EQ，菲谢尔Q|E,刻晴站场Q接高空E坠击，适时拉开距离，实现高度循环
+
 
 ***
 
