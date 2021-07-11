@@ -4,7 +4,7 @@
 
 [提瓦特大地图](https://bbs.mihoyo.com/ys/obc/content/1060/detail?bbs_presentation_style=no_header) **找神瞳、宝箱等之用**
 
-[伤害计算器](https://olwear.github.io/ysi) **简便计算伤害**
+[伤害计算器](https://olwear.github.io/ysi) **简单计算伤害**
 
 ***
 
