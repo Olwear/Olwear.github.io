@@ -83,10 +83,10 @@
             <div class="iline"><span>伤害加成</span><input type="text" id="ia"></div>
         </div>
         <div class="iline">
-            <input type="radio" name="er" id="er" checked><span>无</span>
+            <input type="radio" name="er" id="er" value="0" checked><span>无</span>
             <input type="radio" name="er" id="er" value="0.5"><span>1.5倍增幅</span>
             <input type="radio" name="er" id="er" value="1"><span>2倍增幅</span>
-            <input type="radio" name="er" id="scd"><span>超导</span>
+            <input type="radio" name="er" id="scd" value="1"><span>超导</span>
         </div>
         <div>
             <div class="iline"><span>元素精通加成</span><input type="text" id="ema"></div>
@@ -120,10 +120,14 @@
             dic["mlv"] = 0; // 怪物等级
             var x = document.querySelectorAll(".iline input");
             for (var i in x) {
-                console.log(dic.ema)
                 x[i].value = x[i].type === "text" ? dic[x[i].id] || null : x[i].value;
                 x[i].oninput = function (e) {
                     e = e.target;
+                    if (e.id === "er") {
+                        dic["scd"] = 0;
+                    } else if (e.id == "scd") {
+                        dic["er"] = 0;
+                    }
                     if (/^[\d+\.?\d*]{0,6}$/.test(e.value)) {
                         dic[e.id] = parseFloat(e.value, 10) || 0;
                     } else {
@@ -155,7 +159,6 @@
                         mr = 0;
                     }
                 }
-                console.log(dic.ema,ema)
                 injury = sd / 100 * a * (1 + ia / 100) * (1 - mr / 100) * ((100 +
                     clv) / (200 + clv + mlv)); // 一般伤害
                 // 技能倍率 * 攻击力 * (1 + 伤害加成) * (1 - 怪物抗性) * ((100 + 角色等级) / (200 + 角色等级 + 怪物等级))
