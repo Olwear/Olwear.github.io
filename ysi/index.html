@@ -21,38 +21,40 @@
             background: #f0f0f0;
         }
 
-        .main {
-            display: flex;
-            justify-content: center;
-        }
-
         .ibox {
-            max-width: 100%;
-            width: 320px;
+            max-width: 300px;
+            width: 90%;
             border: 2px solid #000;
         }
 
         .iline,
         .ilines {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
+            flex-wrap: wrap;
             margin: 8px;
             padding: 8px;
             border: 2px solid #000;
         }
+        .iline{
+            justify-content: center;
+        }
+        .ilines{
+            justify-content: space-between;
+        }
 
         .iline span {
-            flex: 2;
+            flex: 1;
         }
 
         .iline input {
-            flex: 3;
+            flex: 1;
             text-align: center;
         }
 
         input[type="text"] {
-            width: 160px;
+            width: 150px;
             font-size: 1.5rem;
             background: transparent;
             border: 0;
@@ -61,8 +63,8 @@
 
         .injury {
             position: relative;
-            width: 100px;
-            height: 100px;
+            width: 90px;
+            height: 90px;
             margin: 10px auto;
             color: #f0f0f0;
             background: #0f0f0f;
@@ -93,10 +95,10 @@
             <div class="iline"><span>伤害加成</span><input type="text" id="ia"></div>
         </div>
         <div class="ilines">
-            <input type="radio" name="er" id="er" checked><span>无</span>
-            <input type="radio" name="er" id="er" value="0.5"><span>1.5倍增幅</span>
-            <input type="radio" name="er" id="er" value="1"><span>2倍增幅</span>
-            <input type="radio" name="er" id="scd" value="1"><span>超导</span>
+            <div><input type="radio" name="er" id="er" checked><span>无</span></div>
+            <div><input type="radio" name="er" id="er" value="0.5"><span>1.5倍增幅</span></div>
+            <div><input type="radio" name="er" id="er" value="1"><span>2倍增幅</span></div>
+            <div><input type="radio" name="er" id="scd" value="1"><span>超导</span></div>
         </div>
         <div>
             <div class="iline"><span>元素精通加成</span><input type="text" id="ema"></div>
