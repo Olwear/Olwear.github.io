@@ -130,7 +130,7 @@
 ### 元素充能效率
 
 <table>
-        <tr>
+        <tr align="center">
             <td>属性</td>
             <td>类型</td>
             <td>前台</td>
@@ -138,7 +138,7 @@
             <td>2后台</td>
             <td>1后台</td>
         </tr>
-        <tr>
+        <tr align="center">
             <td rowspan="2">相同</td>
             <td>微粒</td>
             <td>3</td>
@@ -146,25 +146,25 @@
             <td rowspan="6">70%</td>
             <td rowspan="6">80%</td>
         </tr>
-        <tr>
+        <tr align="center">
             <td>晶球</td>
             <td>9</td>
         </tr>
-        <tr>
+        <tr align="center">
             <td rowspan="2">不同</td>
             <td>微粒</td>
             <td>1</td>
         </tr>
-        <tr>
+        <tr align="center">
             <td>晶球</td>
             <td>3</td>
         </tr>
-        <tr>
+        <tr align="center">
             <td rowspan="2">无</td>
             <td>微粒</td>
             <td>2</td>
         </tr>
-        <tr>
+        <tr align="center">
             <td>晶球</td>
             <td rowspan="6">6</td>
         </tr>
