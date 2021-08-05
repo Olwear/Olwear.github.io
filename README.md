@@ -170,16 +170,6 @@
   <td height="19" class="xl65" style="height:14.25pt">晶球</td>
   <td class="xl65">6</td>
  </tr>
- <!--[if supportMisalignedColumns]-->
- <tr height="0" style="display:none">
-  <td width="72" style="width:54pt"></td>
-  <td width="72" style="width:54pt"></td>
-  <td width="72" style="width:54pt"></td>
-  <td width="72" style="width:54pt"></td>
-  <td width="72" style="width:54pt"></td>
-  <td width="72" style="width:54pt"></td>
- </tr>
- <!--[endif]-->
 </tbody></table>
 
 ***
