@@ -129,80 +129,58 @@
 
 ### 元素充能效率
 
-| 属性 | 类型 | 前台 | 3后台 | 2后台| 1后台 |
-| :-: | :-: | :-: | :-: | :-: | :-: |
-| 同属性 |
-| 同属性 |
-| 异属性 |
-| 异属性 |
-<table>
-	<tr>
-	    <th>属性</th>
-	    <th>属性值</th>
-	    <th>描述</th>  
-	</tr >
-	<tr >
-	    <td rowspan="9">type</td>
-	    <td>text</td>
-	    <td>单行文本输入框</td>
-	</tr>
-	<tr>
-	    <td>password</td>
-	    <td>密码输入框</td>
-	</tr>
-	<tr>
-	    <td>radio</td>
-	    <td>单选按钮</td>
-	</tr>
-	<tr>
-	    <td>CheckBox</td>
-	    <td>复选按钮</td>
-	</tr>
-	<tr><td>button</td>
-	    <td>普通按钮</td>
-	</tr>
-	<tr>
-	    <td>submit</td>
-	    <td>提交按钮</td>
-	</tr>
-	<tr>
-	    <td>reset</td>
-	    <td>重置按钮</td>
-	</tr>
-	<tr>
-	    <td>image</td>
-	    <td>图像形式的提交按钮</td>
-	</tr>
-	<tr>
-	    <td >file</td>
-	    <td>文件域</td>
-	</tr>
-	<tr>
-	    <td >name</td>
-	    <td>用户自定义</td>
-	    <td>控件名称</td>
-	</tr>
-	<tr>
-	    <td >value</td>
-	    <td >用户自定义</td>
-	    <td >默认文本值</td>
-	</tr>
-	<tr>
-	    <td >size</td>
-	    <td >正整数</td>
-	    <td >控件在页面中的显示宽度</td>
-	</tr>
-	<tr>
-	    <td >checked</td>
-	    <td >checked</td>
-	    <td >定义选择控件默认被选中项</td>
-	</tr>
-	<tr>
-	    <td >maxlength</td>
-	    <td >正整数</td>
-	    <td >控件允许输入的最多字符</td>
-	</tr>
-</table>
+<table border="0" cellpadding="0" cellspacing="0" width="432" style="border-collapse:
+ collapse;table-layout:fixed;width:324pt">
+ <colgroup><col width="72" span="6" style="width:54pt">
+ </colgroup><tbody><tr height="19" style="height:14.25pt">
+  <td height="19" class="xl65" width="72" style="height:14.25pt;width:54pt">属性</td>
+  <td class="xl65" width="72" style="width:54pt">类型</td>
+  <td class="xl65" width="72" style="width:54pt">前台</td>
+  <td class="xl65" width="72" style="width:54pt">3后台</td>
+  <td class="xl65" width="72" style="width:54pt">2后台</td>
+  <td class="xl65" width="72" style="width:54pt">1后台</td>
+ </tr>
+ <tr height="19" style="height:14.25pt">
+  <td rowspan="2" height="38" class="xl65" style="height:28.5pt">同属性</td>
+  <td class="xl65">微粒</td>
+  <td class="xl65">3</td>
+  <td rowspan="6" class="xl66">60%</td>
+  <td rowspan="6" class="xl66">70%</td>
+  <td rowspan="6" class="xl66">80%</td>
+ </tr>
+ <tr height="19" style="height:14.25pt">
+  <td height="19" class="xl65" style="height:14.25pt">晶球</td>
+  <td class="xl65">9</td>
+ </tr>
+ <tr height="19" style="height:14.25pt">
+  <td rowspan="2" height="38" class="xl65" style="height:28.5pt">异属性</td>
+  <td class="xl65">微粒</td>
+  <td class="xl65">1</td>
+ </tr>
+ <tr height="19" style="height:14.25pt">
+  <td height="19" class="xl65" style="height:14.25pt">晶球</td>
+  <td class="xl65">3</td>
+ </tr>
+ <tr height="19" style="height:14.25pt">
+  <td rowspan="2" height="38" class="xl65" style="height:28.5pt">无属性</td>
+  <td class="xl65">微粒</td>
+  <td class="xl65">2</td>
+ </tr>
+ <tr height="19" style="height:14.25pt">
+  <td height="19" class="xl65" style="height:14.25pt">晶球</td>
+  <td class="xl65">6</td>
+ </tr>
+ <!--[if supportMisalignedColumns]-->
+ <tr height="0" style="display:none">
+  <td width="72" style="width:54pt"></td>
+  <td width="72" style="width:54pt"></td>
+  <td width="72" style="width:54pt"></td>
+  <td width="72" style="width:54pt"></td>
+  <td width="72" style="width:54pt"></td>
+  <td width="72" style="width:54pt"></td>
+ </tr>
+ <!--[endif]-->
+</tbody></table>
 
 ***
 
