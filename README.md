@@ -129,48 +129,46 @@
 
 ### 元素充能效率
 
-<table border="0" cellpadding="0" cellspacing="0" width="432" style="border-collapse:
- collapse;table-layout:fixed;width:324pt">
- <colgroup><col width="72" span="6" style="width:54pt">
- </colgroup><tbody><tr height="19" style="height:14.25pt">
-  <td height="19" class="xl65" width="72" style="height:14.25pt;width:54pt">属性</td>
-  <td class="xl65" width="72" style="width:54pt">类型</td>
-  <td class="xl65" width="72" style="width:54pt">前台</td>
-  <td class="xl65" width="72" style="width:54pt">3后台</td>
-  <td class="xl65" width="72" style="width:54pt">2后台</td>
-  <td class="xl65" width="72" style="width:54pt">1后台</td>
- </tr>
- <tr height="19" style="height:14.25pt">
-  <td rowspan="2" height="38" class="xl65" style="height:28.5pt">同属性</td>
-  <td class="xl65">微粒</td>
-  <td class="xl65">3</td>
-  <td rowspan="6" class="xl66">60%</td>
-  <td rowspan="6" class="xl66">70%</td>
-  <td rowspan="6" class="xl66">80%</td>
- </tr>
- <tr height="19" style="height:14.25pt">
-  <td height="19" class="xl65" style="height:14.25pt">晶球</td>
-  <td class="xl65">9</td>
- </tr>
- <tr height="19" style="height:14.25pt">
-  <td rowspan="2" height="38" class="xl65" style="height:28.5pt">异属性</td>
-  <td class="xl65">微粒</td>
-  <td class="xl65">1</td>
- </tr>
- <tr height="19" style="height:14.25pt">
-  <td height="19" class="xl65" style="height:14.25pt">晶球</td>
-  <td class="xl65">3</td>
- </tr>
- <tr height="19" style="height:14.25pt">
-  <td rowspan="2" height="38" class="xl65" style="height:28.5pt">无属性</td>
-  <td class="xl65">微粒</td>
-  <td class="xl65">2</td>
- </tr>
- <tr height="19" style="height:14.25pt">
-  <td height="19" class="xl65" style="height:14.25pt">晶球</td>
-  <td class="xl65">6</td>
- </tr>
-</tbody></table>
+<table>
+        <tr>
+            <td>属性</td>
+            <td>类型</td>
+            <td>前台</td>
+            <td>3后台</td>
+            <td>2后台</td>
+            <td>1后台</td>
+        </tr>
+        <tr>
+            <td rowspan="2">相同</td>
+            <td>微粒</td>
+            <td>3</td>
+            <td rowspan="6">60%</td>
+            <td rowspan="6">70%</td>
+            <td rowspan="6">80%</td>
+        </tr>
+        <tr>
+            <td>晶球</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td rowspan="2">不同</td>
+            <td>微粒</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>晶球</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td rowspan="2">无</td>
+            <td>微粒</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>晶球</td>
+            <td rowspan="6">6</td>
+        </tr>
+</table>
 
 ***
 
