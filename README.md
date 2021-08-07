@@ -104,68 +104,72 @@
 
 * #### 主属性
 
-| 生之花 | 死之羽 | 时之沙 | 空之杯 | 理之冠 |
-| :-: | :-: |  :-: | :-: | :-: |
-| 生命值 | 攻击力 | 生命值% | 生命值% | 生命值% |
-||| 攻击力% | 攻击力% | 攻击力% |
-||| 防御力% | 防御力% | 防御力% |
-|||  元素精通 | 元素精通 | 元素精通 |
-||| 元素充能效率% | 元素伤害加成% | 暴击率% |
-|||| 物理伤害加成% | 暴击伤害% |
-||||| 治疗加成% |
+| 生之花 | 死之羽 |    时之沙     |    空之杯     |  理之冠   |
+| :----: | :----: | :-----------: | :-----------: | :-------: |
+| 生命值 | 攻击力 |    生命值%    |    生命值%    |  生命值%  |
+|        |        |    攻击力%    |    攻击力%    |  攻击力%  |
+|        |        |    防御力%    |    防御力%    |  防御力%  |
+|        |        |   元素精通    |   元素精通    | 元素精通  |
+|        |        | 元素充能效率% | 元素伤害加成% |  暴击率%  |
+|        |        |               | 物理伤害加成% | 暴击伤害% |
+|        |        |               |               | 治疗加成% |
 
 * #### 副属性
 
 | 生命值 | 生命值% | 攻击力 | 攻击力% | 防御力 | 防御力% | 元素精通 | 暴击率% | 暴击伤害% | 元素充能效率% |
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| 209 | 4.1 | 14 | 4.1 | 16 | 5.1 | 16 | 2.7 | 5.4 | 4.5 |
-| 239 | 4.7 | 16 | 4.7 | 19 | 5.8 | 19 | 3.1 | 6.2 | 5.2 |
-| 269 | 5.3 | 18 | 5.3 | 21 | 6.6 | 21 | 3.5 | 7.0 | 5.8 |
-| 299 | 5.8 | 19 | 5.8 | 23 | 7.3 | 23 | 3.9 | 7.8 | 6.5 |
+| :----: | :-----: | :----: | :-----: | :----: | :-----: | :------: | :-----: | :-------: | :-----------: |
+|  209   |   4.1   |   14   |   4.1   |   16   |   5.1   |    16    |   2.7   |    5.4    |      4.5      |
+|  239   |   4.7   |   16   |   4.7   |   19   |   5.8   |    19    |   3.1   |    6.2    |      5.2      |
+|  269   |   5.3   |   18   |   5.3   |   21   |   6.6   |    21    |   3.5   |    7.0    |      5.8      |
+|  299   |   5.8   |   19   |   5.8   |   23   |   7.3   |    23    |   3.9   |    7.8    |      6.5      |
 
 ***
 
 ### 元素充能效率
 
 <table>
-        <tr align="center">
-            <td>属性</td>
-            <td>类型</td>
-            <td>前台</td>
-            <td>3后台</td>
-            <td>2后台</td>
-            <td>1后台</td>
+    <thread>
+        <tr>
+            <th style="text-align: center">属性</th>
+            <th style="text-align: center">类型</th>
+            <th style="text-align: center">前台</th>
+            <th style="text-align: center">3后台</th>
+            <th style="text-align: center">2后台</th>
+            <th style="text-align: center">1后台</th>
         </tr>
-        <tr align="center">
-            <td rowspan="2">相同</td>
-            <td>微粒</td>
-            <td>3</td>
-            <td rowspan="6">60%</td>
-            <td rowspan="6">70%</td>
-            <td rowspan="6">80%</td>
+    </thread>
+    <tbody>
+        <tr>
+            <td rowspan="2"  style="text-align: center">相同</td>
+            <td style="text-align: center">微粒</td>
+            <td style="text-align: center">3</td>
+            <td rowspan="6" style="text-align: center">60%</td>
+            <td rowspan="6" style="text-align: center">70%</td>
+            <td rowspan="6" style="text-align: center">80%</td>
         </tr>
-        <tr align="center">
-            <td>晶球</td>
-            <td>9</td>
+        <tr>
+            <td style="text-align: center">晶球</td>
+            <td style="text-align: center">9</td>
         </tr>
-        <tr align="center">
-            <td rowspan="2">不同</td>
-            <td>微粒</td>
-            <td>1</td>
+        <tr>
+            <td rowspan="2" style="text-align: center">不同</td>
+            <td style="text-align: center">微粒</td>
+            <td style="text-align: center">1</td>
         </tr>
-        <tr align="center">
-            <td>晶球</td>
-            <td>3</td>
+        <tr>
+            <td style="text-align: center">晶球</td>
+            <td style="text-align: center">3</td>
         </tr>
-        <tr align="center">
-            <td rowspan="2">无</td>
-            <td>微粒</td>
-            <td>2</td>
+        <tr>
+            <td rowspan="2" style="text-align: center">无</td>
+            <td style="text-align: center">微粒</td>
+            <td style="text-align: center">2</td>
         </tr>
-        <tr align="center">
-            <td>晶球</td>
-            <td rowspan="6">6</td>
+        <tr>
+            <td style="text-align: center">晶球</td>
+            <td rowspan="6" style="text-align: center">6</td>
         </tr>
+    </tbody>
 </table>
 
 ***
