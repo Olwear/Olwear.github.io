@@ -2,29 +2,31 @@
 
 ## 欢迎订阅我的虎牙直播间 [狂鸟丶等风](https://www.huya.com/orlove)
 
-[提瓦特大地图](https://bbs.mihoyo.com/ys/obc/content/1060/detail?bbs_presentation_style=no_header) **找神瞳、宝箱等之用**
+**[快乐吹水](https://jq.qq.com/?_wv=1027&k=aADtINV8)**
 
-[伤害计算器](https://olwear.github.io/ysi) **简单计算伤害**
+**[提瓦特大地图](https://bbs.mihoyo.com/ys/obc/content/1060/detail?bbs_presentation_style=no_header)** **找神瞳、宝箱等之用**
+
+**[伤害计算器](https://olwear.github.io/ysi)** **简单计算伤害**
 
 ***
 
-* ### 上路先引
+### 上路先引
 
-	* **祈愿**
+* **祈愿**
 
-        * 喜欢的的角色UP拉满，中后期适当投资武器UP（**不要忘了每月星尘兑换祈愿货币**）
+    * 喜欢的的角色UP拉满，中后期适当投资武器UP（**不要忘了每月星尘兑换祈愿货币**）
 
-	* **队伍配置**
+* **队伍配置**
 
-	    * 单主C和三拐阵容，主升C，工具人适当培养
+    * 单主C和三拐阵容，主升C，工具人适当培养
 
-	* **原粹树脂**
+* **原粹树脂**
 
-	    * 多刷藏金启示花，周常BOSS卡周末最高世界等级刷
+    * 多刷藏金启示花，周常BOSS卡周末最高世界等级刷
 
-    * **活动**
+* **活动**
 
-	    * 米游社、微博超话签到等
+    * 米游社、微博超话签到等
 
 ***
 
