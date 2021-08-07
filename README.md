@@ -140,7 +140,7 @@
     </thread>
     <tbody>
         <tr>
-            <td rowspan="2"  style="text-align: center">相同</td>
+            <td rowspan="2" style="text-align: center">相同</td>
             <td style="text-align: center">微粒</td>
             <td style="text-align: center">3</td>
             <td rowspan="6" style="text-align: center">60%</td>
