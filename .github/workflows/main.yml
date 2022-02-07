@@ -1,0 +1,16 @@
+on:
+  schedule:
+    - cron: "0 20 * * *"
+  workflow_dispatch:
+jobs:
+  bpa:
+    runs-on: ubuntu 18.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v2.3.2
+        with:
+          python-version: 3.9
+      - name: Setup Selenium
+        run: pip intall Selenium==3.141.0
+      - run: python ./bpa/py.py
