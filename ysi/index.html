@@ -24,43 +24,37 @@
         .ibox {
             max-width: 300px;
             width: 80%;
-            border: 2px solid #000;
+            border: 2px solid #0f0f0f;
         }
 
         .iline,
         .ilines {
             display: flex;
+            justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
             margin: 8px;
             padding: 8px;
-            border: 2px solid #000;
-        }
-
-        .iline {
-            justify-content: space-around;
-        }
-
-        .ilines {
-            justify-content: space-between;
+            border: 2px solid #0f0f0f;
         }
 
         .iline span {
             text-align: center;
             word-break: keep-all;
+            user-select: none;
         }
-
-        .iline input {
-            text-align: center;
-        }
-
 
         .iline input {
             width: 150px;
             font-size: 1.5rem;
+            text-align: center;
             background: transparent;
             border: 0;
             outline: none;
+        }
+
+        .ilines span {
+            user-select: none;
         }
 
         .injury {
@@ -115,7 +109,9 @@
             <div class="iline"><span>怪物等级</span><input type="text" id="mlv"></div>
         </div>
     </div>
-    <div class="injury"></div>
+    <div class="injury">
+        <p></p>
+    </div>
 </div>
 
 <body>
@@ -163,7 +159,7 @@
                     mr = dic["mr"],
                     clv = dic["clv"],
                     mlv = dic["mlv"],
-                    injuey;
+                    injury;
                 if (scd) {
                     er = 0;
                     if (mr >= 40) {
@@ -179,7 +175,9 @@
                 injury = cd ? injury * (1 + cd / 100) : injury; //暴击
                 injury = er ? injury * (1 + er + ema / 100) : injury; // 元素反应
                 injury = ~~injury; // 最终伤害
-                document.querySelector(".injury").innerHTML = injury > 0 ? "<p>" + injury + "</p>" : "";;
+                if (injury > 0) {
+                    document.querySelector(".injury p").innerHTML = injury;
+                }
             }
             ci();
         })();
