@@ -21,8 +21,36 @@
             background: #f0f0f0;
         }
 
-        .ocbox * {
-            margin: 2px;
+        .ocbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 200px;
+        }
+
+        .box * {
+            margin: 5px;
+        }
+
+        #code {
+            padding: 5px 10px;
+            border: 2px solid #0f0f0f;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: space-around;
+            border: 2px solid #0f0f0f;
+            border-radius: 20px;
+        }
+
+        .btn button {
+            padding: 2px 8px;
+            border: none;
+            border-radius: 20px;
         }
     </style>
 </head>
@@ -30,10 +58,13 @@
 <body>
     <div class="ocbox">
         <textarea id="entext" cols="30" rows="10" placeholder="此处输入需要加密的文本"></textarea>
-        <div class="btn">
+        <div class="box">
             <input type="text" id="code" placeholder="密钥">
-            <button id="enbtn">加密</button>
-            <button id="debtn">解密</button>
+            <div class="btn">
+                <button id="enbtn">加密</button>
+                <button id="debtn">解密</button>
+            </div>
+
         </div>
         <textarea id="detext" cols="30" rows="10" placeholder="此处输入需要解密的文本"></textarea>
     </div>
@@ -44,7 +75,6 @@
                 const n = text.length,
                     m = code.length;
                 let a = "";
-
                 for (let i = 0; i != n; ++i) {
                     a += String.fromCharCode(text.charCodeAt(i) ^ (1 << code.charCodeAt(i % m) % 7));
                 }
@@ -56,7 +86,6 @@
                     code = document.querySelector("#code").value,
                     a = oc(text, code);
                 document.querySelector("#detext").value = a;
-                console.log(typeof (text));
             }
 
             document.querySelector("#debtn").onclick = function () {
