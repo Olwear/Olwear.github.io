@@ -35,24 +35,18 @@
                 return a;
             }
 
-            function Encrypt() {
+            document.querySelector("#enbtn").onclick = function () {
                 let text = document.querySelector("#entext").value,
                     code = document.querySelector("#code"),
                     a = oc(text, code);
                 document.querySelector("#detext").value = a;
             }
 
-            function Decrypt() {
+            document.querySelector("#debtn").onclick = function () {
                 let text = document.querySelector("#detext").value,
                     code = document.querySelector("#code"),
                     a = oc(text, code);
                 document.querySelector("#entext").value = a;
-            }
-            document.querySelector("#enbtn").onclick = function () {
-                Encrypt();
-            }
-            document.querySelector("#debtn").onclick = function () {
-                Decrypt()
             };
         })();
     </script>
