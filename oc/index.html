@@ -43,15 +43,21 @@
         .btn {
             display: flex;
             justify-content: space-around;
-            border: 2px solid #0f0f0f;
+
             border-radius: 20px;
         }
 
         .btn button {
             padding: 2px 8px;
-            border: none;
-            outline: none;
+            border: 2px solid #0f0f0f;
             border-radius: 20px;
+            transition: all .2s ease;
+            cursor: pointer;
+        }
+
+        .btn button:hover {
+            color: #f0f0f0;
+            background-color: #0f0f0f;
         }
     </style>
 </head>
