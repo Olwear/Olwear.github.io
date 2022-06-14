@@ -115,9 +115,9 @@
 </div>
 
 <body>
-    <script type="text/javascript">
+    <script>
         (function () {
-            var dic = {};
+            let dic = {};
             dic["sd"] = 100; // 技能倍率
             dic["a"] = 2000; // 攻击力
             dic["cd"] = 200; // 暴击伤害
@@ -129,7 +129,7 @@
             dic["clv"] = 0; // 角色等级
             dic["mlv"] = 0; // 怪物等级
             var x = document.querySelectorAll(".iwrap input");
-            for (var i in x) {
+            for (let i in x) {
                 x[i].value = x[i].type === "text" ? dic[x[i].id] || null : x[i].value;
                 x[i].oninput = function (e) {
                     e = e.target;
@@ -149,7 +149,7 @@
             }
 
             function ci() {
-                var sd = dic["sd"],
+                let sd = dic["sd"],
                     a = dic["a"],
                     cd = dic["cd"],
                     ia = dic["ia"],
