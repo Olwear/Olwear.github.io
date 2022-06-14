@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OC</title>
+</head>
+
+<body>
+    <div class="">
+        <div>
+        </div>
+        <textarea id="entext" cols="30" rows="10" value="sample"></textarea>
+        <div>
+            <input type="text" id="code">
+            <button id="enbtn">加密</button>
+            <button id="debtn">解密</button>
+        </div>
+        <div>
+            <textarea id="detext" cols="30" rows="10" value="sample"></textarea>
+        </div>
+    </div>
+    <script>
+        (function () {
+            function oc(text, code) {
+                let n = text.length,
+                    m = code.length,
+                    a = "";
+
+                for (let i = 0; i != n; ++i) {
+                    a += text[i] ^ 1 << code[i % m] % 7;
+                }
+                return a;
+            }
+
+            function Encrypt() {
+                let text = document.querySelector("#entext").value,
+                    code = document.querySelector("#code"),
+                    a = oc(text, code);
+                document.querySelector("#detext").value = a;
+            }
+
+            function Decrypt() {
+                let text = document.querySelector("#detext").value,
+                    code = document.querySelector("#code"),
+                    a = oc(text, code);
+                document.querySelector("#entext").value = a;
+            }
+            document.querySelector("#enbtn").onclick = function () {
+                Encrypt();
+            }
+            document.querySelector("#debtn").onclick = function () {
+                Decrypt()
+            };
+        })();
+    </script>
+</body>
+
+</html>
