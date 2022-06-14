@@ -6,45 +6,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f0f0f0;
+        }
+
+        .ocbox * {
+            margin: 2px;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="">
-        <div>
-        </div>
-        <textarea id="entext" cols="30" rows="10" value="sample"></textarea>
-        <div>
-            <input type="text" id="code">
+    <div class="ocbox">
+        <textarea id="entext" cols="30" rows="10" placeholder="此处输入需要加密的文本"></textarea>
+        <div class="btn">
+            <input type="text" id="code" placeholder="密钥">
             <button id="enbtn">加密</button>
             <button id="debtn">解密</button>
         </div>
-        <div>
-            <textarea id="detext" cols="30" rows="10" value="sample"></textarea>
-        </div>
+        <textarea id="detext" cols="30" rows="10" placeholder="此处输入需要解密的文本"></textarea>
+    </div>
     </div>
     <script>
         (function () {
             function oc(text, code) {
-                let n = text.length,
-                    m = code.length,
-                    a = "";
+                const n = text.length,
+                    m = code.length;
+                let a = "";
 
                 for (let i = 0; i != n; ++i) {
-                    a += text[i] ^ 1 << code[i % m] % 7;
+                    a += String.fromCharCode(text.charCodeAt(i) ^ (1 << code.charCodeAt(i % m) % 7));
                 }
                 return a;
             }
 
             document.querySelector("#enbtn").onclick = function () {
                 let text = document.querySelector("#entext").value,
-                    code = document.querySelector("#code"),
+                    code = document.querySelector("#code").value,
                     a = oc(text, code);
                 document.querySelector("#detext").value = a;
+                console.log(typeof (text));
             }
 
             document.querySelector("#debtn").onclick = function () {
                 let text = document.querySelector("#detext").value,
-                    code = document.querySelector("#code"),
+                    code = document.querySelector("#code").value,
                     a = oc(text, code);
                 document.querySelector("#entext").value = a;
             };
