@@ -29,6 +29,12 @@
             max-width: 200px;
         }
 
+        .ocbox textarea {
+            padding: 10px;
+            border-radius: 10px;
+            resize: none;
+        }
+
         .box * {
             margin: 5px;
         }
@@ -43,7 +49,6 @@
         .btn {
             display: flex;
             justify-content: space-around;
-
             border-radius: 20px;
         }
 
@@ -59,6 +64,16 @@
             color: #f0f0f0;
             background-color: #0f0f0f;
         }
+
+        .file p {
+            color: #0f0f0f;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .file p:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 
@@ -71,14 +86,17 @@
                 <button id="enbtn">加密</button>
                 <button id="debtn">解密</button>
             </div>
-
+            <div class="file">
+                <input type="file" id="file" hidden>
+                <p>选择文件上传</p>
+            </div>
         </div>
         <textarea id="detext" cols="30" rows="10" placeholder="此处输入需要解密的文本"></textarea>
     </div>
-    </div>
     <script>
         (function () {
-            function oc(text, code) {
+            function oc(text) {
+                let code = document.querySelector("#code").value;
                 const n = text.length,
                     m = code.length;
                 let a = "";
@@ -89,18 +107,31 @@
             }
 
             document.querySelector("#enbtn").onclick = function () {
-                let text = document.querySelector("#entext").value,
-                    code = document.querySelector("#code").value,
-                    a = oc(text, code);
+                let text = document.querySelector("#entext").value;
+                a = oc(text);
                 document.querySelector("#detext").value = a;
             }
 
             document.querySelector("#debtn").onclick = function () {
-                let text = document.querySelector("#detext").value,
-                    code = document.querySelector("#code").value,
-                    a = oc(text, code);
+                let text = document.querySelector("#detext").value;
+                a = oc(text);
                 document.querySelector("#entext").value = a;
             };
+
+            document.querySelector(".file p").onclick = function () {
+                document.querySelector("#file").click();
+            }
+            document.querySelector("#file").onchange = function (e) {
+                let fr = new FileReader();
+                fr.onload = function () {
+                    let t = document.createElement('a');
+                    const a = oc(fr.result), b = new Blob([a], { type: 'blob' });
+                    t.download = e.target.files[0].name;
+                    t.href = URL.createObjectURL(b);
+                    t.click();
+                }
+                fr.readAsText(this.files[0]);
+            }
         })();
     </script>
 </body>
