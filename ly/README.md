@@ -268,7 +268,7 @@ Loopback环回接口
 > default-route originate
 
 配置RIPv2认证
-> rip authentication-mode md5 nonstatndard simple plain huawei
+> ]rip authentication-mode simple plain huawei
 >
 > rip authentication-mode md5 nonstandard cipher huawei 123
 
