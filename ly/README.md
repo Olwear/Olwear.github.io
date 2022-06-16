@@ -47,9 +47,9 @@
 ***
 
 查看交换机接口的详细信息
-> display interface
+> display interface  g0/0/1
 
-关闭自协商，设置交换机接口的双工模式和速率
+关闭自协商，设置交换机接口的半/全双工模式和速率
 
 > interface g0/0/1
 >
@@ -57,7 +57,7 @@
 >
 > speed 10
 >
-> duplex half
+> duplex half/full
 
 查看交换机的MAC地址表
 > display mac-address
@@ -81,10 +81,10 @@
 > vlan batch 1 2
 
 显示VLAN详细信息
-> display vlan
+> display vlan 1
 
 删除VLAN
-> undo vlan
+> undo vlan 1
 
 将接口加入VLAN
 > port link-type access
