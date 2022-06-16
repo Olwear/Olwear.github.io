@@ -75,7 +75,6 @@
 ***
 
 创建VLAN
-
 > vlan 1
 >
 > vlan batch 1 2
@@ -276,7 +275,7 @@ Loopback环回接口
 
 ***
 ***
-启用 OSPF
+启用OSPF
 > ospf 100 router-id 1.1.1.1
 
 选择OSPF配置的区域
@@ -285,7 +284,7 @@ Loopback环回接口
 声明OSPF启用的网络
 > network 10.8.0.1 0.0.0.0(反掩码)
 
-上看 OSPF 路由
+查看OSPF路由
 > display ip routing-table protocol ospf
 
 查看路由器所有邻居的概览信息
