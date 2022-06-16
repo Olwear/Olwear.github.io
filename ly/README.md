@@ -111,7 +111,7 @@
 > vlan 1
 >
 > statistic enable
-
+>
 > disp vlan 1 statistics
 
 查看VLAN的汇总信息
