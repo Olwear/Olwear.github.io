@@ -93,7 +93,7 @@
 >
 > port link-type trunk
 >
-> port trunk 1 2/allow-pass vlan all
+> port trunk allow-pass vlan 1 2/all
 
 ***
 
