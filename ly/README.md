@@ -130,8 +130,8 @@ int g0/0/1
 gvrp
 ```
 
-修改交换机接口的注册模式
-> gvrp registration fixed(禁止注册)/forbidden(禁止通过)
+修改交换机接口的注册模式(禁止注册/禁止通过)
+> gvrp registration fixed/forbidden
 
 ***
 ***
@@ -144,7 +144,7 @@ stp mode stp
 stp priority 4096
 ```
 
-查看 STP 信息
+查看STP信息
 > display stp
 
 查看接口角色
@@ -158,7 +158,7 @@ stp priority 4096
 
 ***
 
-启用 RSTP
+启用RSTP
 > stp mode rstp
 
 指定根网桥和备用根网桥
@@ -184,7 +184,7 @@ stp priority 4096
 > active region-configuration
 
 为MSTI指定根网桥/备用网桥
-stp instance 1 root primary/secondary
+> stp instance 1 root primary/secondary
 
 查看MST域配置信息
 > check region-configuration
@@ -231,3 +231,125 @@ stp instance 1 root primary/secondary
 
 ***
 ***
+配置RIP
+
+```
+rip
+network 10.0.0.0(有类网络)
+```
+
+配置RIPv2
+
+```
+rip
+version 2
+```
+
+查看路由器详细RIP信息
+> display rip
+
+查看路由器上RIP接口的详细信息
+> display rip 1 interface s1/0/0 verbose
+
+开启RIP调测功能
+> debugging rip 1
+
+查看当前的调测信息
+> display debugging
+
+关闭调测功能
+> undo debugging rip 1/all
+
+
+启用接口上的毒性反转特性
+> rip poison-reverse
+***
+Loopback环回接口
+> 一种逻辑接口，这里使用环回接口来模拟路由器所连接的4个子网
+
+查看路由器上的IP接口状态
+> display ip interface brief
+
+查看通过RIP学习到的路由信息
+> display ip routing-table protocol rip
+
+禁用水平分隔
+> undo rip split-horizon
+
+配置RIPv2下发默认路由
+> defualt-route originate
+
+```
+rip authentication-mode simple
+rip authentication-mode md5 nonstatndard simple plain huawei
+rip authentication-mode md5 nonstandard cipher huawei 123
+```
+
+***
+***
+启用 OSPF
+> ospf 100 router-id 1.1.1.1
+
+选择OSPF配置的区域
+> area 0
+
+声明OSPF启用的网络
+> network 10.8.0.1 0.0.0.0(反掩码)
+
+上看 OSPF 路由
+> display ip routing-table protocol ospf
+
+查看路由器所有邻居的概览信息
+> display ospf peer brief
+
+查看详细邻居信息
+> display ospf peer
+
+查看接口上的OSPF有关参数
+> display ospf 100 interface g0/0/0
+
+为路由器配置OSPF的认证
+
+```
+authentication-mode md5 1 plain/cipher huawei
+ospf authentication-mode simple plain huawei
+```
+
+修改Hello计时器
+> ospf timer hello 10
+
+配置Dead计时器
+> ospf timer dead 40d
+
+静默所有接口的OSPF通告
+> silent-interface all
+
+启用接口上的OSPF通告
+undo silent-interface s1/0/0
+
+接口OSPF开销=带宽参考值/接口链路带宽
+
+取消接口的OSPF开销值
+> undo ospf cost
+
+指定路由器OSPF的带宽参考值
+> bandwidth-reference 100
+
+***
+指定虚链路另一端的路由器
+> vlink-peer 4.4.4.4
+
+查看路由器的OSPF虚链路信息
+> display ospf vlink
+
+查看路由器的OSPF链路状态数据（LSDB）
+> display ospf lsdb
+
+注入RIP路由到OSPF路由域中
+> import-route rip 5
+
+将该区域设置为NSSA区域
+> nssa
+
+限制ABR向NSSA区域通告此类LSA
+> nssa no-summary
