@@ -4,11 +4,9 @@
 > display version
 
 修改系统时间
-
-```
-clock timezone local add 8:00:00
-clock datetime 9:47:00 2019-7-14
-```
+> clock timezone local add 8:00:00
+>
+> clock datetime 9:47:00 2019-7-14
 
 查看生效的新系统时间
 > display clock
@@ -17,12 +15,13 @@ clock datetime 9:47:00 2019-7-14
 
 设置空闲超时时间为20分钟，默认为10分钟
 
-```
-user-interface console 0
-authentication-mode password
-set authentication password cipher huawei
-idle-timeout 20 0
-```
+> user-interface console 0
+>
+> authentication-mode password
+>
+> set authentication password cipher huawei
+>
+> idle-timeout 20 0
 
 查看当前目录下的文件列表
 > dir
@@ -52,18 +51,19 @@ idle-timeout 20 0
 
 关闭自协商，设置交换机接口的双工模式和速率
 
-```
-interface g0/0/1
-undo negotiation auto
-speed 10
-duplex half
-```
+> interface g0/0/1
+>
+> undo negotiation auto
+>
+> speed 10
+>
+> duplex half
 
 查看交换机的MAC地址表
 > display mac-address
 
 向MAC地址表添加静态条目
->mac-address static
+> mac-address static
 
 修改MAC地址动态条目的老化时间
 > mac-address aging-time
@@ -76,10 +76,9 @@ duplex half
 
 创建VLAN
 
-```
-vlan 1
-vlan batch 1 2
-```
+> vlan 1
+>
+> vlan batch 1 2
 
 显示VLAN详细信息
 > display vlan
@@ -88,47 +87,42 @@ vlan batch 1 2
 > undo vlan
 
 将接口加入VLAN
-
-```
-port link-type access
-port default vlan 1
-
-port link-type trunk
-port trunk 1 2/allow-pass vlan all
-```
+> port link-type access
+>
+> port default vlan 1
+>
+> port link-type trunk
+>
+> port trunk 1 2/allow-pass vlan all
 
 ***
 
 将接口加入VLAN
-
-```
-port link-type hybrid
-port hybrid pvid VLAN 1
-port hybrid untagged vlan 1 100
-```
+> port link-type hybrid
+>
+> port hybrid pvid VLAN 1
+>
+> port hybrid untagged vlan 1 100
 
 查看特定VLAN的信息
 > display vlan 1
 
 启用和查看VLAN的流量统计
+> vlan 1
+>
+> statistic enable
 
-```
-vlan 1
-statistic enable
-disp vlan 1 statistics
-```
+> disp vlan 1 statistics
 
 查看VLAN的汇总信息
 > display vlan summary
 
 ***
 开启GVRP功能
-
-```
-gvrp
-int g0/0/1
-gvrp
-```
+> gvrp
+>
+> int g0/0/1
+> gvrp
 
 修改交换机接口的注册模式(禁止注册/禁止通过)
 > gvrp registration fixed/forbidden
@@ -137,12 +131,11 @@ gvrp
 ***
 
 启用STP并修改优先级
-
-```
-stp enable
-stp mode stp
-stp priority 4096
-```
+> stp enable
+>
+> stp mode stp
+>
+> stp priority 4096
 
 查看STP信息
 > display stp
@@ -232,18 +225,14 @@ stp priority 4096
 ***
 ***
 配置RIP
-
-```
-rip
-network 10.0.0.0(有类网络)
-```
+> rip
+>
+> network 10.0.0.0(有类网络)
 
 配置RIPv2
-
-```
-rip
-version 2
-```
+> rip
+>
+> version 2
 
 查看路由器详细RIP信息
 > display rip
@@ -259,7 +248,6 @@ version 2
 
 关闭调测功能
 > undo debugging rip 1/all
-
 
 启用接口上的毒性反转特性
 > rip poison-reverse
@@ -279,11 +267,12 @@ Loopback环回接口
 配置RIPv2下发默认路由
 > defualt-route originate
 
-```
-rip authentication-mode simple
-rip authentication-mode md5 nonstatndard simple plain huawei
-rip authentication-mode md5 nonstandard cipher huawei 123
-```
+配置RIPv2认证
+> rip authentication-mode simple
+>
+> rip authentication-mode md5 nonstatndard simple plain huawei
+>
+> rip authentication-mode md5 nonstandard cipher huawei 123
 
 ***
 ***
@@ -309,11 +298,9 @@ rip authentication-mode md5 nonstandard cipher huawei 123
 > display ospf 100 interface g0/0/0
 
 为路由器配置OSPF的认证
-
-```
-authentication-mode md5 1 plain/cipher huawei
-ospf authentication-mode simple plain huawei
-```
+> authentication-mode md5 1 plain/cipher huawei
+>
+> ospf authentication-mode simple plain huawei
 
 修改Hello计时器
 > ospf timer hello 10
@@ -325,7 +312,7 @@ ospf authentication-mode simple plain huawei
 > silent-interface all
 
 启用接口上的OSPF通告
-undo silent-interface s1/0/0
+> undo silent-interface s1/0/0
 
 接口OSPF开销=带宽参考值/接口链路带宽
 
