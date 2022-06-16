@@ -63,7 +63,7 @@
 > display mac-address
 
 向MAC地址表添加静态条目
-> mac-address static
+> mac-address static 009a-cd11-1111 g0/0/1 vlan 1
 
 修改MAC地址动态条目的老化时间
 > mac-address aging-time
