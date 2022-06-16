@@ -6,14 +6,14 @@
 修改系统时间
 > clock timezone local add 8:00:00
 >
-> clock datetime 9:47:00 2019-7-14
+> clock datetime 00:00:00 2022-6-8
 
 查看生效的新系统时间
 > display clock
 
 将 Console 接口登录方式配置为密码认证方式，密码为明文
 
-设置空闲超时时间为20分钟，默认为10分钟
+设置空闲超时时间
 
 > user-interface console 0
 >
@@ -21,7 +21,7 @@
 >
 > set authentication password cipher huawei
 >
-> idle-timeout 20 0
+> idle-timeout 10 0
 
 查看当前目录下的文件列表
 > dir
@@ -306,7 +306,7 @@ Loopback环回接口
 > ospf timer hello 10
 
 配置Dead计时器
-> ospf timer dead 40d
+> ospf timer dead 40
 
 静默所有接口的OSPF通告
 > silent-interface all
@@ -324,7 +324,7 @@ Loopback环回接口
 
 ***
 指定虚链路另一端的路由器
-> vlink-peer 4.4.4.4
+> vlink-peer 1.1.1.1
 
 查看路由器的OSPF虚链路信息
 > display ospf vlink
@@ -333,7 +333,7 @@ Loopback环回接口
 > display ospf lsdb
 
 注入RIP路由到OSPF路由域中
-> import-route rip 5
+> import-route rip 1
 
 将该区域设置为NSSA区域
 > nssa
