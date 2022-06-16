@@ -265,7 +265,7 @@ Loopback环回接口
 > undo rip split-horizon
 
 配置RIPv2下发默认路由
-> defualt-route originate
+> default-route originate
 
 配置RIPv2认证
 > rip authentication-mode simple
