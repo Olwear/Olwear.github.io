@@ -156,7 +156,7 @@
 启用RSTP
 > stp mode rstp
 
-指定根网桥和备用根网桥
+指定根网桥/备用根网桥
 > stp root primary/secondary
 
 配置边缘接口
@@ -169,7 +169,7 @@
 进入MST域视图
 > stp region-configuration
 
-指定MST域名，
+指定MST域名
 > region-name 0
 
 创建MSTI和VLAN的映射关系
