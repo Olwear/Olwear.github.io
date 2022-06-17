@@ -222,7 +222,7 @@
 ***
 
 配置三层交换机VLANIF接口
-> interface Vlanif 1
+> interface vlanif 1
 
 ***
 ***
