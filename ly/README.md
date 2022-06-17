@@ -142,6 +142,9 @@
 查看接口角色
 > display stp brief
 
+关闭接口
+> shutdown
+
 查看接口
 > display stp interface
 
